@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        
+        <title>Insert title here</title>
+    </head>
+    <body class="container-fluid " data-ng-controller="angularChartController">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <div class="panel-title text-center">AngularJS Charts</div>
+            </div>
+            <div class="panel-body container-fluid">
+                <section>
+                    <div class="row well">
+                        <div class="col-xs-12 ">
+                            <section class="" >
+                                <div class="row lead">
+                                    <div class="col-md-12 text-center">Pie Chart</div>
+                                </div>
+                                <div class ="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">
+                                      
+                                       <label for="storeName">Start&nbsp;Date</label>
+                                       
+                                    
+                    <input type='text' class="form-control" id='startDate1' data-ng-model="startDate1" />
+                                            
+                                           
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="storeName">End&nbsp;Date</label>
+                                           <input type='text' class="form-control" id='endDate1' data-ng-model="endDate1" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="storeName">Store&nbsp;Name</label>
+                                            <select class="form-control" data-ng-model="storeName1" data-ng-options="x for x in storeList" data-ng-change="getChartDataByStoreName(storeName1)">
+                                                <option value="">--Select--</option>
+                                            </select>
+                                            <input type = "hidden" id="storeName" data-ng-model = "storeName"/>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="storeButton"></label>
+                                            <button id = "storeButton" type="submit" data-ng-click="getChartDataByStoreName(storeName1, startDate1, endDate1)" class="btn btn-primary form-control" style="margin-top:5px;" >Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" >
+                                    <div class="col-md-3" >
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+                                    <div class="col-md-3" >
+                                        <canvas id="myChart1"></canvas>
+                                    </div>
+                                    <div class="col-md-3" >
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class = "col-md-6">
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <th>Order&nbsp;Type</th>
+                                                <th>Order&nbsp;Count</th>
+                                                <th>Store&nbsp;Name</th>
+                                            </tr>
+                                            <tr data-ng-repeat="x in chartData track by $index">
+                                                <td>{{ x.type}}</td>
+                                                <td>{{ x.id}}</td>
+                                                <td>{{ x.storeName}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <input type="hidden" class="form-control" id="query" data-ng-model="query"  value="{{query}}" />
+                                    <div class="col-md-10">
+                                        <div class="col-md-2">
+                                            <button id = "downloadButton" type="submit" data-ng-click="downloadXLS(query)" class="btn btn-primary form-control" style="margin-top:5px;" >Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

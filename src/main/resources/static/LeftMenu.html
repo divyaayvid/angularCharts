@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-ng-app="angularChartApp">
+    <head>
+        <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/charts/charts.css">
+        <link rel="stylesheet" href="webjars/Eonasdan-bootstrap-datetimepicker/4.15.35/css/bootstrap-datetimepicker.min.css">
+         <!--    <link rel="stylesheet" href="webjars/angular-material/1.1.1/angular-material.min.css"> -->
+        <script type="text/javascript" src="webjars/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="webjars/momentjs/2.10.3/moment.js"></script>
+       
+        <script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="webjars/Eonasdan-bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="webjars/angularjs/1.5.9/angular.min.js"></script>
+        
+     <!--    <script type="text/javascript" src="webjars/angularjs/1.5.9/angular-animate.min.js"></script>
+        <script type="text/javascript" src="webjars/angularjs/1.5.9/angular-aria.min.js"></script>
+        <script type="text/javascript" src="webjars/angular-material/1.1.1/angular-material.min.js"></script> -->
+        <script type="text/javascript" src="webjars/chartjs/2.4.0/Chart.js"></script>
+        <script type="text/javascript" src="webjars/angular-chart.js/1.1.1/angular-chart.min.js"></script>
+        <script type="text/javascript" src="js/charts/charts.js"></script>
+        
+</head>
+<body data-ng-controller="angularChartController" >kkkkkkkkkkkkkkkkk
+        <div class="col-xs-3"> <!-- required for floating -->
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs tabs-left sideways">
+            <li class="active"><a href="#pie" data-toggle="tab" data-ng-click="getChartDataByStoreName();onLoad()">Pie&nbsp;Chart</a></li>
+            <li><a href="#bar" data-toggle="tab" data-ng-click="getBarChartDataByStoreName()">Bar&nbsp;Chart</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-9">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="pie">
+            <div data-ng-init="getChartDataByStoreName();onLoad()">
+                    <div data-ng-include="'./PieChart.html'"></div>
+                </div>
+             </div>
+            <div class="tab-pane" id="bar">
+               <div  >
+                    <div data-ng-include="'./BarChart.html'"></div>
+                </div>
+            </div>
+             </div>
+        </div>
+
+</body>
+</html>

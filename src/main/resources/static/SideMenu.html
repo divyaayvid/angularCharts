@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-ng-app="angularChartApp">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/charts/charts.css">
+         <link rel="stylesheet" href="css/general/jquery.datetimepicker.min.css">
+         <link href="css/maps/search-box-example.css" rel="stylesheet" type="text/css">
+       <script type="text/javascript" src="webjars/momentjs/2.10.3/moment.js"></script>
+      
+        <script type="text/javascript" src="webjars/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+      
+        <script type="text/javascript" src="webjars/angularjs/1.5.9/angular.min.js"></script>
+        <script type="text/javascript" src="webjars/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+   
+     <script type="text/javascript" src="js/general/jquery.datetimepicker.full.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-simple-logger/0.1.6/angular-simple-logger.min.js"></script>
+<script src="js/maps/angular-google-maps.min.js"></script>
+        
+     <!--    <script type="text/javascript" src="webjars/angularjs/1.5.9/angular-aria.min.js"></script>
+        <script type="text/javascript" src="webjars/angular-material/1.1.1/angular-material.min.js"></script> -->
+        <script type="text/javascript" src="webjars/chartjs/2.4.0/Chart.js"></script>
+        <script type="text/javascript" src="webjars/angular-chart.js/1.1.1/angular-chart.min.js"></script>
+        <script type="text/javascript" src="js/charts/charts.js"></script>
+        <style>
+body {padding:20px}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="">
+    	<div class="navbar-header">
+        
+           <a class="navbar-brand" href="#">Angular Charts</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="">
+      <div class="row row-offcanvas row-offcanvas-left active">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li class="active"><a href="#/pie" >Pie&nbsp;Chart</a></li>
+              <li><a href="#/bar" >Bar&nbsp;Chart</a></li>
+              <li><a href="#/maps" >Place&nbsp;Search</a></li>
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9 container-fluid" ui-view="main">
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+</body>
+</html>
